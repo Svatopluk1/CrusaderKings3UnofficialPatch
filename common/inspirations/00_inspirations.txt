@@ -1624,9 +1624,9 @@ research_inspiration = {
 		}
 		else_if = {
 			limit = {
-				exists = liege
+				exists = scope:inspiration_owner.liege
 			}
-			add = liege.fp3_research_base_cost
+			add = scope:inspiration_owner.liege.fp3_research_base_cost
 		}
 		else = {
 			add = scope:inspiration_owner.fp3_research_base_cost
@@ -1729,9 +1729,9 @@ religious_inspiration = {
 		}
 		else_if = {
 			limit = {
-				exists = liege
+				exists = scope:inspiration_owner.liege
 			}
-			add = liege.medium_gold_value
+			add = scope:inspiration_owner.liege.medium_gold_value
 		}
 		else = {
 			add = scope:inspiration_owner.medium_gold_value
