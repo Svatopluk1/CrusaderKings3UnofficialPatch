@@ -11,3 +11,7 @@ unop_is_coup_powerful_vassal_trigger = {
 		is_powerful_vassal = yes
 	}
 }
+
+unop_is_loaded = { #Unop: For other mods to check if unop is there
+	always = yes
+}
