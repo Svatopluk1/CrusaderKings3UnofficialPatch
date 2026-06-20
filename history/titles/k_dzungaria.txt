@@ -1117,6 +1117,7 @@ c_qinggil = {
 	}
 	841.1.1 = {
 		holder = fictional_kirghiz_2
+		government = herder_government #Unop Was defaulting to clan; mirror sibling Kirghiz counties
 	}
 
 	#End of Kirghiz Khanate
@@ -1578,6 +1579,7 @@ c_balgun = {
 	}
 	861.1.1 = {
 		holder = fictional_kirghiz_1
+		government = herder_government #Unop Was defaulting to clan; mirror sibling Kirghiz counties
 	}
 
 	#End of Kirghiz Khanate
@@ -1614,6 +1616,7 @@ c_kabtag = {
 	}
 	861.1.1 = {
 		holder = fictional_kirghiz_1
+		government = herder_government #Unop Was defaulting to clan; mirror sibling Kirghiz counties
 	}
 
 	#End of Kirghiz Khanate
@@ -1651,6 +1654,7 @@ c_kara_asirgan = {
 	}
 	850.1.1 = {
 		holder = 217173
+		government = herder_government #Unop Was defaulting to clan; mirror sibling Kirghiz counties
 	}
 	876.1.4 = {
 		holder = 303003	#fictional C_or Bügün

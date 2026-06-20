@@ -495,7 +495,7 @@ d_tamna = {
 
 	20.1.1 = {
 		holder = korean_go_jeju_33 # Du_myeong
-		government = feudal_government
+		government = tribal_government #Unop Isolated island/peninsula with no feudal neighbor; mirror tribal c_yeongwon
 	}
 	43.1.1 = {
 		holder = korean_go_jeju_32 # Seon_ju
@@ -616,7 +616,7 @@ c_tamna = {
 
 	20.1.1 = {
 		holder = korean_go_jeju_33 # Du_myeong
-		government = feudal_government
+		government = tribal_government #Unop Isolated island/peninsula with no feudal neighbor; mirror tribal c_yeongwon
 	}
 	43.1.1 = {
 		holder = korean_go_jeju_32 # Seon_ju
@@ -735,7 +735,7 @@ c_ulleong = {
 	1178.1.1 = { change_development_level = 3 }
 
 	867.1.1 = {
-		government = feudal_government
+		government = tribal_government #Unop Isolated island/peninsula with no feudal neighbor; mirror tribal c_yeongwon
 		holder = korean_bak_ulleong_1
 	}
 	1066.1.1 = {
