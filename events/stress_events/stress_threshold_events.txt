@@ -195,11 +195,39 @@ stress_threshold.0001 = {
 				has_trait = faltering_heart
 				is_incapable = no
 			}
-			send_interface_message = {
-				type = msg_health_change
-				title = your_heart_beats_irregularly_feed_message_title
-				left_icon = root
-				add_trait_xp = { trait = faltering_heart track = faltering_heart value = 25 }
+			#Unop gate the faltering_heart xp by stress level (and tier it) like the imprisoned path does, so it no longer progresses at stress level 0
+			if = {
+				limit = {
+					stress_level >= 3
+				}
+				send_interface_message = {
+					type = msg_health_change
+					title = your_heart_beats_irregularly_feed_message_title
+					left_icon = root
+					add_trait_xp = { trait = faltering_heart track = faltering_heart value = 25 }
+				}
+			}
+			else_if = {
+				limit = {
+					stress_level >= 2
+				}
+				send_interface_message = {
+					type = msg_health_change
+					title = your_heart_beats_irregularly_feed_message_title
+					left_icon = root
+					add_trait_xp = { trait = faltering_heart track = faltering_heart value = 15 }
+				}
+			}
+			else_if = {
+				limit = {
+					stress_level >= 1
+				}
+				send_interface_message = {
+					type = msg_health_change
+					title = your_heart_beats_irregularly_feed_message_title
+					left_icon = root
+					add_trait_xp = { trait = faltering_heart track = faltering_heart value = 5 }
+				}
 			}
 			if = {
 				limit = {
