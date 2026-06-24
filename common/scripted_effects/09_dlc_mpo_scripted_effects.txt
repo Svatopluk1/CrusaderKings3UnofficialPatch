@@ -6247,22 +6247,12 @@ expanding_steppe_effect = {
 				REGION = dlc_mpo_steppe_siberia_further_expansion
 			}
 			#Unop the permafrost modifier loc promises it is removed by conquering the whole North via this decision, but the removal was never implemented
-			#Unop the permafrost modifier loc promises it is removed by conquering the whole North via this decision, but the removal was never implemented
+			custom_tooltip = {
+				text = unop_remove_permafrost_modifiers
+			}
 			hidden_effect = {
 				every_county_in_region = {
 					region = mpo_region_permafrost
-					if = {
-						limit = { has_county_modifier = mpo_siberian_permafrost_modifier }
-						remove_county_modifier = mpo_siberian_permafrost_modifier
-					}
-					else_if = {
-						limit = { has_county_modifier = mpo_siberian_permafrost_modifier_bad }
-						remove_county_modifier = mpo_siberian_permafrost_modifier_bad
-					}
-				}
-			}
-				region = mpo_region_permafrost
-				hidden_effect = {
 					if = {
 						limit = { has_county_modifier = mpo_siberian_permafrost_modifier }
 						remove_county_modifier = mpo_siberian_permafrost_modifier
