@@ -303,3 +303,8 @@
  domicile_building_parameter_domicile_increased_wet_nurse_aptitude_4: "[GetCourtPositionType('wet_nurse_court_position').GetName()] [aptitude|E]: #P +[EmptyScope.ScriptValue('domicile_increased_wet_nurse_aptitude_4_value')|0]#!"
  domicile_building_parameter_domicile_increased_wet_nurse_aptitude_5: "[GetCourtPositionType('wet_nurse_court_position').GetName()] [aptitude|E]: #P +[EmptyScope.ScriptValue('domicile_increased_wet_nurse_aptitude_5_value')|0]#!"
  domicile_building_parameter_domicile_increased_wet_nurse_aptitude_6: "[GetCourtPositionType('wet_nurse_court_position').GetName()] [aptitude|E]: #P +[EmptyScope.ScriptValue('domicile_increased_wet_nurse_aptitude_6_value')|0]#!"
+ # This region doesn't have a name in game currently, but as we want to highligth the region to the player we need to link it and have a proper name
+ mpo_region_permafrost: "Permafrost"
+ # Based on all_permafrost_will_clear
+ unop_remove_permafrost_modifiers: "All [counties|E] in the [GetGeographicalRegion('mpo_region_permafrost').GetName] [region|E]#! will lose [GetModifier('mpo_siberian_permafrost_modifier').GetNameWithTooltip] and [GetModifier('mpo_siberian_permafrost_modifier_bad').GetNameWithTooltip] [modifiers|E]"
+
