@@ -1,4 +1,4 @@
-﻿
+
 namespace = conqueror
 
 # Become a Conqueror
@@ -84,10 +84,10 @@ conqueror.0001 = {
 		create_story = story_conqueror
 		if = {
 			limit = {
-				any_vassal = { vassal_stance = belligerent }
+				any_vassal = { has_vassal_stance = belligerent }
 			}
 			every_vassal = {
-				vassal_stance = belligerent
+				limit = { has_vassal_stance = belligerent }
 				custom = every_belligerent_vassal
 				add_opinion = {
 					modifier = approving_opinion
@@ -98,10 +98,10 @@ conqueror.0001 = {
 		}
 		if = {
 			limit = {
-				any_vassal = { vassal_stance = glory_hound }
+				any_vassal = { has_vassal_stance = glory_hound }
 			}
 			every_vassal = {
-				vassal_stance = glory_hound
+				limit = { has_vassal_stance = glory_hound }
 				custom = every_glory_hound_vassal
 				add_opinion = {
 					modifier = approving_opinion
@@ -112,9 +112,10 @@ conqueror.0001 = {
 		}
 		if = {
 			limit = {
-				any_vassal = { vassal_stance = parochial }
+				any_vassal = { has_vassal_stance = parochial }
 			}
 			every_vassal = {
+				limit = { has_vassal_stance = parochial }
 				custom = every_parochial_vassal
 				add_opinion = {
 					modifier = disapproving_opinion
@@ -142,10 +143,10 @@ conqueror.0001 = {
 		add_prestige = minor_prestige_loss
 		if = {
 			limit = {
-				any_vassal = { vassal_stance = belligerent }
+				any_vassal = { has_vassal_stance = belligerent }
 			}
 			every_vassal = {
-				vassal_stance = belligerent
+				limit = { has_vassal_stance = belligerent }
 				custom = every_belligerent_vassal
 				add_opinion = {
 					modifier = approving_opinion
@@ -156,10 +157,10 @@ conqueror.0001 = {
 		}
 		if = {
 			limit = {
-				any_vassal = { vassal_stance = glory_hound }
+				any_vassal = { has_vassal_stance = glory_hound }
 			}
 			every_vassal = {
-				vassal_stance = glory_hound
+				limit = { has_vassal_stance = glory_hound }
 				custom = every_glory_hound_vassal
 				add_opinion = {
 					modifier = disapproving_opinion
@@ -170,9 +171,10 @@ conqueror.0001 = {
 		}
 		if = {
 			limit = {
-				any_vassal = { vassal_stance = parochial }
+				any_vassal = { has_vassal_stance = parochial }
 			}
 			every_vassal = {
+				limit = { has_vassal_stance = parochial }
 				custom = every_parochial_vassal
 				add_opinion = {
 					modifier = approving_opinion
@@ -259,7 +261,7 @@ conqueror.0002 = {
 	immediate = {
 		save_scope_as = root_scope
 		every_owned_story = {
-			type = story_conqueror
+			limit = { story_type = story_conqueror }
 			end_story = yes
 		}
 		add_character_flag = used_to_be_conqueror
@@ -274,10 +276,10 @@ conqueror.0002 = {
 		add_prestige_level = -2
 		if = {
 			limit = {
-				any_vassal = { vassal_stance = glory_hound }
+				any_vassal = { has_vassal_stance = glory_hound }
 			}
 			every_vassal = {
-				vassal_stance = glory_hound
+				limit = { has_vassal_stance = glory_hound }
 				custom = every_glory_hound_vassal
 				add_opinion = {
 					modifier = disappointed_opinion
@@ -969,11 +971,11 @@ conqueror.1200 = {
 	trigger = {
 		any_vassal = {
 			is_physically_able_ai_adult = yes
-			vassal_stance = glory_hound
+			has_vassal_stance = glory_hound
 		}
 		any_vassal = {
 			is_physically_able_ai_adult = yes
-			vassal_stance = belligerent
+			has_vassal_stance = belligerent
 		}
 		NOT = {
 			days_of_continuous_peace >= 730 # 2 years
@@ -983,15 +985,15 @@ conqueror.1200 = {
 	immediate = {
 		save_scope_as = root_scope
 		random_vassal = {
-			vassal_stance = glory_hound
 			limit = {
+				has_vassal_stance = glory_hound
 				is_physically_able_ai_adult = yes
 			}
 			save_scope_as = vassal_1
 		}
 		random_vassal = {
-			vassal_stance = glory_hound
 			limit = {
+				has_vassal_stance = glory_hound
 				is_physically_able_ai_adult = yes
 				this != scope:vassal_1
 			}
@@ -1003,7 +1005,7 @@ conqueror.1200 = {
 		name = conqueror.1200.a
 		
 		every_vassal = {
-			vassal_stance = glory_hound
+			limit = { has_vassal_stance = glory_hound }
 			custom = every_glory_hound_vassal
 			add_opinion = {
 				modifier = war_war_war_opinion
@@ -1041,7 +1043,7 @@ conqueror.1200 = {
 		}
 		
 		every_vassal = {
-			vassal_stance = glory_hound
+			limit = { has_vassal_stance = glory_hound }
 			custom = every_glory_hound_vassal
 			add_opinion = {
 				modifier = war_war_war_opinion
